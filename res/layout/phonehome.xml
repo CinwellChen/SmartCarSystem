@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/phonebj"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/editTextOutPhoneNumber"
+            android:layout_width="296dip"
+            android:layout_height="55dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginTop="10dip"
+            android:background="#00000000"
+            android:ems="15"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="40dip" >
+
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/ButtonPhoneDel"
+            android:layout_width="104dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/imagebutton_selector"
+            android:src="@drawable/ic_dial_action_delete_normal_keyboard" >
+
+        </ImageButton>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum1"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_1_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum2"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_2_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum3"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_3_wht" >
+            </ImageButton>
+
+            <Button
+                android:id="@+id/buttonPhoneReturn"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:text="返回"
+                android:textColor="#FFFFF0"
+                android:textSize="35dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum4"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_4_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum5"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_5_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum6"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_6_wht"
+               >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonCallPhone"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/ic_ab_dialer_holo_dark" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="68dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum7"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_7_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum8"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_8_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum9"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_9_wht" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/buttonPhoneNum0"
+                android:layout_width="104dip"
+                android:layout_height="68dip"
+                android:background="@drawable/imagebutton_selector"
+                android:src="@drawable/dial_num_0_wht" >
+            </ImageButton>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

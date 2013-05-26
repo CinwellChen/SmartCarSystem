@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/widget1"	
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:background="#33000000"
+    >
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal">
+    <TextView 
+    android:text="    01:58:45" 
+    android:textColor="#CCCCCC"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:textSize="20dp"
+    android:paddingLeft="6dip" 
+    android:textAppearance="?android:attr/textAppearanceSmall" 
+    android:id="@+id/moviePlayTime" 
+    ></TextView>
+    <SeekBar 
+                   android:id="@+id/seekBarPlay" 
+                   android:layout_width="280dp"
+                   android:layout_height="wrap_content"
+                   android:paddingLeft="6dip"
+                   android:layout_gravity="center"                                  
+                   android:progressDrawable="@drawable/progressbar_first"
+                   android:thumb="@drawable/progress_dot" 
+    ></SeekBar>
+    <TextView 
+    android:text=" 02:01:40" 
+    android:layout_width="wrap_content" 
+    android:textColor="#CCCCCC"
+    android:layout_height="wrap_content" 
+    android:textSize="20dp" 
+    android:textAppearance="?android:attr/textAppearanceSmall" 
+    android:id="@+id/movieDurationTime" 
+   ></TextView>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="26dp"
+    android:orientation="horizontal" 
+    android:layout_gravity="center"
+    >
+ <ImageView 
+    android:layout_width="30dp" 
+    android:src="@drawable/musicplaystop" 
+    android:id="@+id/ImageViewReset" 
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center"
+   ></ImageView>
+<ImageView 
+    android:layout_width="30dp" 
+    android:src="@drawable/movieplay" 
+    android:id="@+id/imageViewPlayStop" 
+    android:layout_height="wrap_content" 
+    ></ImageView>
+<ImageView 
+    android:layout_width="30dp" 
+    android:layout_height="wrap_content" 
+    android:scaleType="fitXY" 
+    android:src="@drawable/fullscreennormal" 
+    android:id="@+id/imageViewFullChange"></ImageView>
+    
+   
+    <TextView 
+    android:text="停止" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:paddingLeft="6dip" 
+    android:id="@+id/textMovieState" 
+    ></TextView>
+<TextView 
+    android:text="播放模式" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:paddingLeft="6dip"
+    android:id="@+id/textMoviePlayStype" 
+    ></TextView>
+
+</LinearLayout>
+</LinearLayout>
+	
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/GBK"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="GBK"/>
+    <item
+        android:id="@+id/changebg"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="更换背景"/>
+    <item
+        android:id="@+id/changecolor"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="更换颜色"/>
+    <item
+        android:id="@+id/auto_scroll"
+        android:icon="@drawable/auto_scroll"
+        android:title="自动滚屏"/>
+    <item
+        android:id="@+id/goto_line"
+        android:icon="@drawable/ic_menu_goto"
+        android:title="跳转至.."/>
+</menu>

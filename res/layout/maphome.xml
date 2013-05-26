@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!--
+         <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        
+        <com.google.android.maps.MapView
+            android:id="@+id/gpsMapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:apiKey="0UriMmae_-UZwxh8WUfO9FmI5RJWmE5yKcPdMAQ" >
+        </com.google.android.maps.MapView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/car14" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/imageBtnZoomIn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/zoomin" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/imageBtnZoomOut"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/zoomout" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/imageBtnViewStype"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/mapstype2" >
+            </ImageButton>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:text="搜  索" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:text="设  置" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:text="返  回" >
+            </Button>
+            
+            <CheckBox
+                android:id="@+id/checkBoxAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="跟踪"
+                android:textColor="#000000" >
+            </CheckBox>
+        </LinearLayout>
+
+        <DigitalClock
+            android:id="@+id/digitalClockMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="DigitalClock"
+            android:textColor="#000000"
+            android:textSize="20dp" >
+        </DigitalClock>
+    </LinearLayout>
+    <!-- </LinearLayout> -->
+
+</LinearLayout>

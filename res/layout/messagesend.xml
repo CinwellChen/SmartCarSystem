@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@drawable/messagesendbg"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editTextMessageSendNumber"
+            style="@style/edittext_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:hint="@string/receiver"
+            android:inputType="phone"
+            android:textSize="22dip" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/editTextMessageSendContex"
+            style="@style/edittext_style"
+            android:layout_width="fill_parent"
+            android:layout_height="164dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:hint="@string/input_content"
+            android:textSize="22dip" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="9dip"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@+id/buttonSendReturn"
+            android:layout_width="90dip"
+            android:layout_height="70dip"
+            android:background="@drawable/button_selector1"
+            android:text="@string/back"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/buttonSendClear"
+            android:layout_width="90dip"
+            android:layout_height="70dip"
+            android:background="@drawable/button_selector1"
+            android:text="@string/clear"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/buttonSendOk"
+            android:layout_width="90dip"
+            android:layout_height="70dip"
+            android:layout_marginTop="2dip"
+            android:background="@drawable/button_selector1"
+            android:text="@string/send"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+</RelativeLayout>

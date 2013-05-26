@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_shortAnimTime">700</integer>
+    <integer name="config_mediumAnimTime">700</integer>
+    <integer name="config_longAnimTime">700</integer>
+    <integer name="declaration_switch">0</integer>
+</resources>

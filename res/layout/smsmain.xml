@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/messagebj2"
+    android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/buttonMessageSendPage"
+                android:layout_width="75dip"
+                android:layout_height="74dip"
+                android:background="@drawable/button_selector1"
+                android:text="短信发送"
+                android:textColor="@android:color/white"
+                android:textSize="21dip" />
+
+            <Button
+                android:id="@+id/buttonMessageLookNewPage"
+                android:layout_width="75dip"
+                android:layout_height="74dip"
+                android:background="@drawable/button_selector1"
+                android:text="未读短信"
+                android:textColor="@android:color/white"
+                android:textSize="21dip" />
+
+            <Button
+                android:id="@+id/buttonMessageLookOldPage"
+                android:layout_width="75dip"
+                android:layout_height="74dip"
+                android:background="@drawable/button_selector1"
+                android:text="已读短信"
+                android:textColor="@android:color/white"
+                android:textSize="21dip" />
+
+            <Button
+                android:id="@+id/buttonMessageReturnPage"
+                android:layout_width="75dip"
+                android:layout_height="74dip"
+                android:background="@drawable/button_selector1"
+                android:text="返回"
+                android:textColor="@android:color/white"
+                android:textSize="21dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewMessageNewTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="59dp"
+            android:layout_toLeftOf="@+id/linearLayout3"
+            android:text="@string/welcomeSMS"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#6495ED"
+            android:textSize="20dip" />
+
+</RelativeLayout>

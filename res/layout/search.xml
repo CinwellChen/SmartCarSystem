@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="490dp"
+        android:layout_height="325dp"
+        android:background="@drawable/searchbj"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radioBtnCoordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:text="按地理坐标"
+            android:textColor="#000000" >
+        </RadioButton>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:text="经度:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/editTextLng"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="5dp"
+                android:inputType="numberDecimal"
+                android:text="110.337112" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="纬度:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/editTextLat"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="5dp"
+                android:inputType="numberDecimal"
+                android:text="25.281469" >
+            </EditText>
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/radioBtnKeyWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="按地方名称"
+            android:textColor="#000000" >
+        </RadioButton>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:text="关键字:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/editTextKeyWords"
+                android:layout_width="285dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="5dp"
+                android:text="桂林电子科技" >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/buttonClearAll"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="清  空" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonSearch"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="搜  索" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="取  消" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

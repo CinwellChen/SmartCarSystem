@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="350dip"
+        android:layout_height="185dip"
+        android:background="@drawable/messagesendbg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:layout_marginTop="10dip"
+            android:text="@string/input_new_num"
+            android:textAppearance="?android:attr/textAppearanceMedium" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextMessageRePerson"
+            style="@style/edittext_style"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:layout_marginTop="15dip"
+            android:hint="@string/receiver"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textSize="22dip" >
+
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/buttonMessageReConfirm"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:text="@string/confirm"
+                android:textSize="18dip" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonMessageReCancel"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/button_selector"
+                android:text="@string/cancle"
+                android:textSize="18dip" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

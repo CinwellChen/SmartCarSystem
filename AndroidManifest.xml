@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guet.SmartCarSystem"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <!-- 启动广播信号捕捉权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+
+    <!-- 下列两行代码，设置SD卡的权限，一定要注意放置位置，放在其它地方可能不起作用！！！ -->
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 使能因特网访问功能、网络定位、GPS定位 -->
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+
+    <!-- GPS/WiFi控制权 -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+
+    <!-- 电话拨打权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS" >
+    </uses-permission>
+
+    <!-- 短信收发权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 读写短信 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <!-- 摄像头使用权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:icon="@drawable/carparnter"
+        android:label="@string/app_name" >
+
+        <!-- 声明google Map -->
+        <!-- <uses-library android:name="com.google.android.maps"> </uses-library> -->
+
+
+        <!--
+            <provider android:name="com.guet.SmartCarSystem.MySuggestionProvider"
+			android:authorities="com.guet.SmartCarSystem.MySuggestionProvider"></provider>
+        -->
+
+        <activity
+            android:name=".SmartCarSystem"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.guet.Reader.TxtReaderActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.Reader.HistoryActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.Reader.TxtListActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.Reader.MainTabActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        
+        <activity
+            android:name=".SmartCarMusic"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.SmartCarMovie.SmartCarMovie"
+            android:screenOrientation="landscape" >
+        </activity>
+       <!--  <activity
+            android:name="com.guet.SmartCarMap.SmartCarMap"
+            android:screenOrientation="landscape" >
+        </activity> -->
+        <activity
+            android:name="com.guet.SmartCarSMS.SmartCarSMS"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.SmartCarNet.SmartCarNet"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.SmartCarCamera.SmartCarCamera"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.SmartCarPhone.SmartCarPhone"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name=".MyFileManager" >
+        </activity>
+
+        <!-- 向系统注册一个服务,用于启动加载自定义程序 -->
+        <receiver android:name=".startHelper" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- </application> -->
+
+
+        <!--
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        -->
+
+ <!--        <activity android:name="com.guet.SmartCarMap.LogoActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> -->
+        <activity
+            android:name="com.guet.SmartCarMap.AMapActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" >
+            </meta-data>
+        </activity>
+        <activity
+            android:name="com.guet.Reader.TxtReader"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.guet.Reader.MainActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.guet.Reader.TxtList"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+</manifest>

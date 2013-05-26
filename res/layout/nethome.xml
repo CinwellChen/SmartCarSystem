@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbarbj"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/netie" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textViewWebInformation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:text="车载浏览器"
+                    android:textColor="#000000"
+                    android:textSize="12dp" >
+                </TextView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonWebMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/net_btn_min" />
+
+            <Button
+                android:id="@+id/buttonWebClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/net_btn_close" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="38dp" >
+
+            <Button
+                android:id="@+id/buttonWebBack"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/net_btn_back" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonWebGo"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/net_btn_go" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonWebStop"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/net_btn_stop" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonWebRefresh"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/net_btn_refresh" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonWebHome"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/net_btn_home" >
+            </Button>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/editTextWebAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="www.baidu.com"
+                    android:textSize="15dp" >
+                </EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonWebOpen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/net_btn_open" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/WebViewProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:maxHeight="5px"
+        android:minHeight="5px"
+        android:visibility="gone" >
+    </ProgressBar>
+
+    <WebView
+        android:id="@+id/webViewNet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

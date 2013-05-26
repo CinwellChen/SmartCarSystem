@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <RadioGroup android:layout_width="wrap_content" android:id="@+id/radioGroup1" android:orientation="horizontal" android:layout_height="wrap_content">
+    </RadioGroup>
+    <LinearLayout 
+    android:id="@+id/linearLayout1" 
+    android:orientation="vertical"
+    android:background="@drawable/settingbj" android:layout_width="490dp" android:layout_height="325dp">
+        <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="50dp" android:text="定位方式:" android:textColor="#0000FF"></TextView>
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/linearLayout6">
+            <RadioGroup android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/radioGroup2" android:orientation="horizontal" android:layout_marginLeft="20dp" android:layout_marginTop="10dp">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:id="@+id/radioGpsLactionStype" android:text="仅使用GPS" android:textColor="#000000"></RadioButton>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/radioNetLactionStype" android:text="仅使用网络" android:textColor="#000000" android:layout_marginLeft="10dp"></RadioButton>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/radioGpsOrNetLactionStype" android:textColor="#000000" android:layout_marginLeft="10dp" android:text="自动切换至最佳"></RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+        <TextView android:layout_marginLeft="20dp" android:id="@+id/TextView01" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:textColor="#0000FF" android:text="定位模块状态:"></TextView>
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout3" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:textColor="#000000" android:text="GPS模块" android:layout_marginLeft="50dp"></TextView>
+            <TextView android:textColor="#000000" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/TextViewGpsState" android:text="已开启" android:layout_marginLeft="70dp"></TextView>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout4" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="8dp">
+            <TextView android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/TextView03" android:layout_height="wrap_content" android:layout_marginLeft="50dp" android:text="网络(WiFi)模块"></TextView>
+            <TextView android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TextViewNetState" android:layout_marginLeft="20dp" android:text="未开启"></TextView>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout5" android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:layout_marginTop="20dp">
+            <Button android:layout_height="wrap_content" android:text="确  定" android:layout_width="80dp" android:id="@+id/buttonSetConfirm"></Button>
+            <Button android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_width="80dp" android:text="取  消" android:id="@+id/buttonSetCancel"></Button>
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

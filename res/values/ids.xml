@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <item type="id" name="splash_logo"></item>
+
+   <item type="id" name="mapView"></item>
+   <item type="id" name="main_location_callback"></item>
+   <item type="id" name="main_current_layer"></item>
+   <item type="id" name="getLocationMessage"></item>
+   <item type="id" name="getLocationPoint"></item>
+  
+   <item type="id" name="dialog_input_address"></item>
+   <item type="id" name="dialog_input_latitude"></item>
+   <item type="id" name="dialog_input_longitude"></item>
+   
+   <item type="id" name="toplayout_search_frame"></item>
+   <item type="id" name="toplayout_textview_search"></item>
+
+   <item type="id" name="RelativeLayout_roadsearch_top"></item>
+   <item type="id" name="imagebtn_roadsearch_startoption"></item>
+   <item type="id" name="imagebtn_roadsearch_goalsoption"></item>
+   <item type="id" name="autotextview_roadsearch_start"></item>
+   <item type="id" name="autotextview_roadsearch_goals"></item>
+   <item type="id" name="btn_layout"></item>
+   <item type="id" name="imagebtn_roadsearch_tab_transit"></item>
+   <item type="id" name="imagebtn_roadsearch_tab_driving"></item>
+   <item type="id" name="imagebtn_roadsearch_tab_walk"></item>
+   <item type="id" name="imagebtn_roadsearch_search"></item>
+</resources>

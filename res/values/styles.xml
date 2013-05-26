@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="edittext_style" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittext_selector</item>
+    </style>
+
+</resources>

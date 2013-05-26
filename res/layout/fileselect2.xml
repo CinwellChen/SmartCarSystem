@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout   
+  xmlns:android="http://schemas.android.com/apk/res/android"  
+  android:orientation="vertical"  
+  android:background="#ffffff"  
+android:layout_width="650dp" android:layout_height="385dp" android:weightSum="1"> 
+
+ <LinearLayout   
+    android:orientation="horizontal"  
+    android:background="#ffffff"
+     android:layout_marginTop="5dp"  
+    android:layout_height="50dp"
+    android:layout_weight="0.25" 
+    android:layout_width="match_parent"
+    android:gravity="left"> 
+     
+  
+    
+   <Button       
+    android:id="@+id/buttonLocalView"    
+    android:layout_width="120dp"      
+    android:layout_height="fill_parent"
+    android:text="本地目录"    
+    />    
+        
+    />  
+     <Button       
+    android:id="@+id/buttonSdView"    
+    android:layout_width="120dp"      
+    android:layout_height="fill_parent"      
+    android:text="Sd卡目录"    
+    />  
+    
+     <Button       
+    android:id="@+id/buttonBackView"    
+    android:layout_width="120dp"     
+    android:layout_height="fill_parent"      
+    android:text="返回上级目录"    
+    /> 
+    
+    <Button       
+    android:id="@+id/buttonBeginSelect"    
+    android:layout_width="120dp"     
+    android:layout_height="fill_parent"      
+    android:text="点我选择"    
+    />
+    
+    <Button       
+    android:id="@+id/buttonConfirm"    
+    android:layout_width="80dp"
+    android:layout_marginLeft="0dp"    
+    android:layout_height="fill_parent"      
+    android:text="确  定"    
+    /> 
+    
+     <Button       
+    android:id="@+id/buttonCancle"    
+    android:layout_width="80dp"      
+    android:layout_height="fill_parent"      
+    android:text="退  出"    
+    />  
+   
+      
+  </LinearLayout>    
+  <TextView   
+    android:id="@+id/mPath"  
+    android:layout_width="650dp"  
+    android:layout_height="30dp"  
+    android:padding="5px"  
+    android:textSize="18sp"
+    android:background="#0f55f0"   
+    android:textColor="#ffff00"  
+  >  
+  </TextView>  
+  <ListView   
+    android:id="@android:id/list"  
+    android:layout_width="fill_parent"  
+    android:layout_height="330px"
+    android:drawSelectorOnTop="false"
+     android:fadeScrollbars="false"
+      android:fadingEdge="none"
+     android:scrollingCache="false"
+      android:scrollbarFadeDuration="0"   
+    >  
+  </ListView>  
+  
+</LinearLayout>  
