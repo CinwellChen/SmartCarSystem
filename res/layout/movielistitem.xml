@@ -8,17 +8,17 @@
 		
 	<TextView 
 		android:id="@+id/movieName"
-		android:layout_width="110dp"
+		android:layout_width="400dp"
 		android:layout_height="wrap_content"
 		android:textColor="#FFFFFF"
-		android:textSize="20px" /> 
+		android:textSize="20dp" /> 
 	
 	<TextView 
 		android:id="@+id/movieTime"
 		android:layout_marginLeft="10dp"
-		android:layout_width="70dp"
+		android:layout_width="100dp"
 		android:layout_height="wrap_content"
 		android:textColor="#FFFFFF"
-		android:textSize="20px" />
+		android:textSize="20dp" />
 	
 </LinearLayout>

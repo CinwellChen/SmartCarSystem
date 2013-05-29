@@ -1,149 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/widget1"
-	android:background="@drawable/musicback"		
-	>
-	<ViewFlipper 
-	    android:id="@+id/movievp"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    >
-	      
-	    
- <!-- second -->
-<LinearLayout 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/musicback" >
+
+    <ViewFlipper
+        android:id="@+id/movievp"
         android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:orientation="vertical"
-	    android:background="@drawable/musicback"
-        >
-       <LinearLayout 
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal">
-           <Button 
-	             android:id="@+id/enterlist"
-	             android:layout_width="wrap_content"
-	            android:layout_height="30dp"
-	            android:text="视频列表"
-	            android:textSize="10dp"
-	           
-	             />
-        <LinearLayout 
-             android:layout_width="match_parent"
-	         android:layout_height="wrap_content"
-	         android:orientation="horizontal"
-	        android:gravity="center"
-	        
-	         >
-	         
-	   	<ImageButton 
-    android:layout_width="30dp" 
-    android:src="@drawable/movievoiceopen" 
-    android:scaleType="fitXY" 
-    android:id="@+id/imageButtonVoice" 
-    android:layout_height="30dp" 
-    android:background="#00000000"
-   ></ImageButton>
-    <SeekBar 
-            android:id="@+id/seekBarVoice" 
-            android:layout_width="200dp"
-            android:layout_height="20dp"
-            android:max="50"
-            android:paddingLeft="10dip"
-           
-            android:paddingTop="2dip"
-            android:progressDrawable="@drawable/progressbar_first"
-            android:thumb="@drawable/progress_dot" ></SeekBar>
-    </LinearLayout>
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:gravity="center">
+        android:layout_height="fill_parent" >
 
-        <SurfaceView
-            android:id="@+id/surfaceView"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:gravity="center" 
-            
-            >
+        <!-- second -->
 
-        </SurfaceView>
-        
-    </LinearLayout>
-    </LinearLayout>
-<!--  first-->
-	     <LinearLayout
-       android:layout_width="fill_parent"
-       android:layout_height="fill_parent" 
-       android:orientation="vertical"
-       
-       >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/musicback"
+            android:orientation="vertical" >
 
-       <TextView
-           android:id="@+id/button5"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="当前播放列表    "
-           android:gravity="center"
-           android:textSize="25dp" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
-       <ListView
-           android:id="@+id/listViewMovie"
-           android:layout_width="match_parent"
-           android:layout_height="181dp"
-           android:drawSelectorOnTop="false"
-           android:fadeScrollbars="false"
-           android:fadingEdge="none"
-           android:scrollbarFadeDuration="0"
-           android:scrollingCache="false" >
-       </ListView>
+                <Button
+                    android:id="@+id/enterlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="视频列表"
+                    android:textSize="10dp" />
 
-       <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="match_parent"
-           android:orientation="horizontal" 
-           android:gravity="center"
-           android:background="#33000000">
-    <Button 
-        android:layout_height="wrap_content" 
-        android:layout_width="wrap_content" 
-        android:text="添加" 
-        android:id="@+id/movieBtnAddFiles1">
-    </Button>
-    <Button 
-        android:layout_height="wrap_content" 
-        android:layout_width="wrap_content" 
-        android:text="删除" 
-        android:id="@+id/movieBtnDelFiles1"></Button>
-    <Button 
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content" 
-        android:text="模式" 
-        android:id="@+id/movieBtnPlayStype1"></Button>
-    <Button 
-        android:layout_height="wrap_content" 
-        android:layout_width="wrap_content" 
-        android:text="窗口" 
-        android:id="@+id/movieBtnViewStype1"></Button>
-    <Button 
-        android:layout_height="wrap_content" 
-        android:layout_width="wrap_content" 
-        android:text="进入播放" 
-        android:id="@+id/entermovie"></Button>
-       </LinearLayout>
-       
-   </LinearLayout>
-	   
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
 
-</ViewFlipper>
-</LinearLayout>
-<!-- 
+                    <ImageButton
+                        android:id="@+id/imageButtonVoice"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:background="#00000000"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/movievoiceopen" >
+                    </ImageButton>
+
+                    <SeekBar
+                        android:id="@+id/seekBarVoice"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:max="50"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="2dip"
+                        android:progressDrawable="@drawable/progressbar_first"
+                        android:thumb="@drawable/progress_dot" >
+                    </SeekBar>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <SurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="300dp"
+                    android:layout_height="246dp"
+                    android:layout_weight="0.47"
+                    android:gravity="center" >
+                </SurfaceView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- first -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="当前播放列表    "
+                android:textSize="25dp" />
+
+            <ListView
+                android:id="@+id/listViewMovie"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:drawSelectorOnTop="false"
+                android:fadeScrollbars="false"
+                android:fadingEdge="none"
+                android:scrollbarFadeDuration="0"
+                android:scrollingCache="false" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#33000000"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/movieBtnAddFiles1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加" >
+                </Button>
+
+                <Button
+                    android:id="@+id/movieBtnDelFiles1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="删除" >
+                </Button>
+
+                <Button
+                    android:id="@+id/movieBtnPlayStype1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="模式" >
+                </Button>
+
+                <Button
+                    android:id="@+id/movieBtnViewStype1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="窗口" >
+                </Button>
+
+                <Button
+                    android:id="@+id/entermovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进入播放" >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout><!--
 <LinearLayout android:id="@+id/linearLayout3" android:layout_y="0dp" android:layout_x="430dp" android:background="#000000" android:layout_width="210dp" android:layout_height="40dp">
     
 </LinearLayout>
@@ -151,7 +152,4 @@
 <LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_y="265dp" android:layout_x="433dp">
     
 </LinearLayout>
-
-
- -->
- 
+-->

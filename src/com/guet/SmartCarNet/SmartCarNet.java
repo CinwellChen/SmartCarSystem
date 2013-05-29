@@ -66,8 +66,8 @@ public class SmartCarNet extends Activity
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		requestWindowFeature(Window.FEATURE_PROGRESS); 
+		
 		setContentView(R.layout.nethome);
-
 		initGuiComponet(); // 初始化元件
 		putFuncationName("onCreate");
 	}

@@ -3,6 +3,8 @@ package com.guet.Reader;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
@@ -13,6 +15,12 @@ public class MainTabActivity extends TabActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// 设置全屏模式,去除标题栏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
 		setContentView(R.layout.maintab);
 		TabHost tabHost = getTabHost();
 		Intent historyIntent = new Intent(this, HistoryActivity.class);

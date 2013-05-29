@@ -173,7 +173,7 @@ public class SmartCarMusic extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.musichome);
 
-		initMusicComponent(); // 初始化GUI元件
+		initMusicComponent(); // 初始化GUI元件t
 		initMusicVariable(); // 初始化系统变量
 		ReadSharedPreferences(); // 读取系统配置参数
 		initMusicObject(); // 初始化系统一些保存的对象，将其从存储空间中读出
@@ -1328,9 +1328,9 @@ public class SmartCarMusic extends Activity {
 				{
 					// 显示无法加载LRC文件
 					Log.i(TAG, "/////////////////无法查到的LRC，也无法在SD卡中找到相应的HashMap!");
-					textSongLrc.setText("/////无法加载该文件的\"lrc\"歌词文件...");
+					textSongLrc.setText("无法加载该文件的\"lrc\"歌词文件...");
 				} else {
-					textSongLrc.setText("//////正在加载该文件的\"lrc\"歌词文件...");
+					textSongLrc.setText("正在加载该文件的\"lrc\"歌词文件...");
 
 					// 判断歌词文件格式,否则易乱码
 					if (isUft8File(lrcFilePath) == true) {

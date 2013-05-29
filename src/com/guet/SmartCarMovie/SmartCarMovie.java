@@ -181,7 +181,7 @@ public class SmartCarMovie extends Activity
 		setContentView(normalViewSave);
 		
 		//"onResume()"后启动后调用,用于初始时显示弹出窗口
-		/*Looper.myQueue().addIdleHandler(new IdleHandler()
+		Looper.myQueue().addIdleHandler(new IdleHandler()
 		{
 			@Override
 			public boolean queueIdle() 
@@ -198,7 +198,7 @@ public class SmartCarMovie extends Activity
 				}
 				return false;  
 			}
-        });	*/
+        });	
 	
 		initMovieComponent(); // 初始化GUI元件
 		initMovieVariable(); // 初始化系统变量
@@ -251,6 +251,7 @@ public class SmartCarMovie extends Activity
 			}
 		};
 
+		
 		// 处理播放视频进度条线程
 		movieThread1 = new movieMapToSeekBar();
 		movieThread1.start();
@@ -426,6 +427,7 @@ public class SmartCarMovie extends Activity
 		multiSelectitems3 = getResources().getStringArray(R.array.moviePlayStype); 
 		multiSelectitems4 = getResources().getStringArray(R.array.movieViewStype); 
 
+		
 		//视频显示设置
         surfaceView.getHolder().setFixedSize(320,240);//设置分辨率
         surfaceView.getHolder().setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
@@ -1158,7 +1160,7 @@ public class SmartCarMovie extends Activity
 							} else
 							{
 								movieMediaPlayer.start();						
-								textMovieState.setText("播放中");
+								textMovieState.setText("播放");
 							}
 
 							mediaPlayerIsPause = false;
@@ -1745,7 +1747,7 @@ public class SmartCarMovie extends Activity
 		}
 
 		// 由“播放”切换到“停止”按钮
-		textMovieState.setText("播放中");
+		textMovieState.setText("播放");
 		btnPlayStop.setImageResource(R.drawable.musicplaypause);
 		movieIsPlay = true;
 		mediaPlayerIsPause = false;

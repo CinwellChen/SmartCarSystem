@@ -1,7 +1,5 @@
 package com.guet.SmartCarSystem;
 
-
-
 import java.io.File;
 import java.io.IOException;
 
@@ -45,28 +43,7 @@ public class SmartCarSystem extends Activity {
 	private static ImageButton btnCameara; // 进入倒车摄像
 	private static ImageButton btnTXT; // 进入电子书
 
-	/*// 电话拨打控件
-	private EditText editTextPhomeNumber; //
-	private Button buttonPhoneNum0, buttonPhoneNum1, buttonPhoneNum2;
-	private Button buttonPhoneNum3, buttonPhoneNum4, buttonPhoneNum5;
-	private Button buttonPhoneNum6, buttonPhoneNum7, buttonPhoneNum8;
-	private Button buttonPhoneNum9;
-	private Button buttonCallPhone;
-	private Button buttonPhoneReturn;
-	private Button buttonPcursorLeft, buttonPcursorRight;
-	private Button buttonPhoneClear, buttonPhoneDelete;
 
-	private PopupWindow phonePopupWindow; // 电话拨打弹出窗口
-	private View phoneView; // 电话拨打窗口
-	private boolean isPhoneViewShow = false;// 窗口弹出标识
-	private ImageView imageViewReference; // 参考显示元件
-
-	PhoneStateListener telLis;
-	TelephonyManager tm;
-	boolean isGoBack = false, isCalled = false;
-	Editable editablePhone;
-	int ditableLength, cursorPostion; // 编辑号码使用
-*/
 	// 短信接收
 	private static final String mACTION = "android.provider.Telephony.SMS_RECEIVED";
 	// 结束倒车摄像广播事件
@@ -86,8 +63,7 @@ public class SmartCarSystem extends Activity {
 
 		initCarComponent(); // 系统GUI控件初始化
 		initCarOthers(); // 系统其它初始化工作
-	/*	initPhoneCompent(); // 初始化电话拨打器
-*/
+
 		// 注册短信接收倾听
 		// 注册短信接收
 		IntentFilter recFilter = new IntentFilter(mACTION);
@@ -167,13 +143,6 @@ public class SmartCarSystem extends Activity {
 				intent4.setClass(SmartCarSystem.this, SmartCarPhone.class);
 				intent4.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 				startActivity(intent4);
-
-				/*if (!isPhoneViewShow) {
-					isPhoneViewShow = true;
-					phonePopupWindow.showAtLocation(imageViewReference,
-							Gravity.CENTER, -320, -310);
-					putLog("电话拨打器已显示!");
-				}*/
 				putLog("电话拨打器已显示!");
 				Log.i(TAG, "Car: btnPhone.setOnClickListener");
 				break;
@@ -220,7 +189,6 @@ public class SmartCarSystem extends Activity {
 			// 退出整个系统
 			case R.id.btnClose: {
 				doExitWork();
-
 				finish();
 			}
 				break;
@@ -298,232 +266,6 @@ public class SmartCarSystem extends Activity {
 	private void putLog(String info) {
 		Log.d(TAG, info);
 	}
-
-	/*// 初始化电话拨打控件
-	void initPhoneCompent() {
-		// 搜索子窗口
-		phoneView = getLayoutInflater().inflate(R.layout.phonehome, null);
-		phonePopupWindow = new PopupWindow(phoneView,
-				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		// 设置属性，注：一定要在show前设置才生效!!!
-		phonePopupWindow.setFocusable(true);
-		phonePopupWindow.setTouchable(true);
-
-		editTextPhomeNumber = (EditText) phoneView
-				.findViewById(R.id.editTextOutPhoneNumber);
-		buttonPhoneNum0 = (Button) phoneView.findViewById(R.id.buttonPhoneNum0);
-		buttonPhoneNum1 = (Button) phoneView.findViewById(R.id.buttonPhoneNum1);
-		buttonPhoneNum2 = (Button) phoneView.findViewById(R.id.buttonPhoneNum2);
-		buttonPhoneNum3 = (Button) phoneView.findViewById(R.id.buttonPhoneNum3);
-		buttonPhoneNum4 = (Button) phoneView.findViewById(R.id.buttonPhoneNum4);
-		buttonPhoneNum5 = (Button) phoneView.findViewById(R.id.buttonPhoneNum5);
-		buttonPhoneNum6 = (Button) phoneView.findViewById(R.id.buttonPhoneNum6);
-		buttonPhoneNum7 = (Button) phoneView.findViewById(R.id.buttonPhoneNum7);
-		buttonPhoneNum8 = (Button) phoneView.findViewById(R.id.buttonPhoneNum8);
-		buttonPhoneNum9 = (Button) phoneView.findViewById(R.id.buttonPhoneNum9);
-		buttonPhoneDelete = (Button) phoneView
-				.findViewById(R.id.ButtonPhoneDel);
-		buttonCallPhone = (Button) phoneView.findViewById(R.id.buttonCallPhone);
-		buttonPhoneReturn = (Button) phoneView
-				.findViewById(R.id.buttonPhoneReturn);
-		buttonPcursorLeft = (Button) phoneView
-				.findViewById(R.id.buttonPhoneCurSorLeft);
-		buttonPcursorRight = (Button) phoneView
-				.findViewById(R.id.buttonPhoneCurSorRight);
-		buttonPhoneClear = (Button) phoneView
-				.findViewById(R.id.buttonPhoneClear);
-
-		// 添加事件倾听
-		buttonPhoneNum0.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum1.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum2.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum3.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum4.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum5.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum6.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum7.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum8.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneNum9.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneDelete.setOnClickListener(phoneBtnClickListener);
-		buttonCallPhone.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneReturn.setOnClickListener(phoneBtnClickListener);
-		buttonPcursorLeft.setOnClickListener(phoneBtnClickListener);
-		buttonPcursorRight.setOnClickListener(phoneBtnClickListener);
-		buttonPhoneClear.setOnClickListener(phoneBtnClickListener);
-
-		// 参考显示主元件
-		imageViewReference = (ImageView) findViewById(R.id.imageView1);
-	}*/
-
-	/*// 电话拨号器事件倾听
-	private OnClickListener phoneBtnClickListener = new OnClickListener() {
-
-		@Override
-		public void onClick(View v) {
-			String tempStr = null;
-
-			// TODO Auto-generated method stub
-			switch (v.getId()) {
-			case R.id.buttonPhoneNum0:
-				tempStr = "0";
-				break;
-			case R.id.buttonPhoneNum1:
-				tempStr = "1";
-				break;
-			case R.id.buttonPhoneNum2:
-				tempStr = "2";
-				break;
-			case R.id.buttonPhoneNum3:
-				tempStr = "3";
-				break;
-			case R.id.buttonPhoneNum4:
-				tempStr = "4";
-				break;
-			case R.id.buttonPhoneNum5:
-				tempStr = "5";
-				break;
-			case R.id.buttonPhoneNum6:
-				tempStr = "6";
-				break;
-			case R.id.buttonPhoneNum7:
-				tempStr = "7";
-				break;
-			case R.id.buttonPhoneNum8:
-				tempStr = "8";
-				break;
-			case R.id.buttonPhoneNum9:
-				tempStr = "9";
-				break;
-
-			case R.id.buttonCallPhone: // 拨打电话
-				doCallPhoneWork();
-				break;
-			case R.id.buttonPhoneReturn: // 返回
-				if (isPhoneViewShow) {
-					phonePopupWindow.dismiss();
-					isPhoneViewShow = false;
-					putLog("电话拨打器已隐藏!");
-				}
-				break;
-			case R.id.buttonPhoneCurSorLeft:// 光标左移
-				editablePhone = editTextPhomeNumber.getText();
-				ditableLength = editablePhone.length();
-				cursorPostion = Selection.getSelectionEnd(editablePhone); // 获取当前光标位置
-				if (cursorPostion >= 1) {
-					Selection.setSelection(editablePhone, cursorPostion - 1);
-				}
-				putLog("cursorPostion=" + (cursorPostion - 1));
-				break;
-			case R.id.buttonPhoneCurSorRight: // 光标右移
-				editablePhone = editTextPhomeNumber.getText();
-				ditableLength = editablePhone.length();
-				cursorPostion = Selection.getSelectionEnd(editablePhone); // 获取当前光标位置
-				if (cursorPostion < ditableLength) {
-					Selection.setSelection(editablePhone, cursorPostion + 1);
-				}
-				putLog("cursorPostion=" + (cursorPostion + 1));
-				break;
-			case R.id.ButtonPhoneDel: // 删除
-				tempStr = editTextPhomeNumber.getText().toString();
-				int totalLength = tempStr.length();
-
-				if (totalLength > 0) {
-					tempStr = tempStr.substring(0, tempStr.length() - 1);
-					editTextPhomeNumber.setText("");
-				}
-				break;
-			case R.id.buttonPhoneClear:
-				editTextPhomeNumber.setText("");
-				break; // 清除
-			default:
-				break;
-			}
-
-			// 更新号码显示
-			if (tempStr != null) {
-				// 在光标处插入字符
-				int index = editTextPhomeNumber.getSelectionStart();
-				editablePhone = editTextPhomeNumber.getEditableText();
-				if (index < 0 || index >= editablePhone.length()) {
-					editablePhone.append(tempStr);
-				} else {
-					editablePhone.insert(index, tempStr);
-				}
-			}
-		}
-	};*/
-
-	// 倾听电话事件初始化
-/*	private void setPhoneStateListener() {
-		telLis = new MyPhoneStateListener();
-		tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-		tm.listen(telLis, PhoneStateListener.LISTEN_CALL_STATE);
-	}*/
-
-	/*// 电话事件倾听重写
-	class MyPhoneStateListener extends PhoneStateListener {
-
-		@Override
-		public void onCallStateChanged(int state, String incomingNumber) {
-			switch (state) {
-			case TelephonyManager.CALL_STATE_IDLE:
-				if (isCalled) {
-					ActivityManager am = (ActivityManager) getApplicationContext()
-							.getSystemService(Context.ACTIVITY_SERVICE);
-					List<RunningTaskInfo> forGroundActv = am.getRunningTasks(1);
-					RunningTaskInfo currentActv = forGroundActv.get(0);
-					String actvName = currentActv.topActivity.getClassName();
-
-					if ("com.android.phone.InCallScreen"
-							.equalsIgnoreCase(actvName)) {
-						isCalled = false; // 标识打电话结束
-						Intent it = getIntent();
-						it.setAction(Intent.ACTION_MAIN);
-						it.putExtra("isGoBack", true); // 标识是返回，传给OnCreate()
-						startActivity(it);
-						Log.w(TAG, " -- CALL_STATE_IDLE -->Over ");
-					}
-				}
-				break;
-			case TelephonyManager.CALL_STATE_OFFHOOK:
-				Log.w(TAG, " -- CALL_STATE_OFFHOOK ");
-				break;
-			case TelephonyManager.CALL_STATE_RINGING:
-				Log.w(TAG, " -- CALL_STATE_RINGING ");
-				break;
-			default:
-				break;
-			}
-			super.onCallStateChanged(state, incomingNumber);
-		}
-
-	}*/
-
-	/*// 执行电话拨打动作
-	private void doCallPhoneWork() {
-		// 获取电话号码
-		String strInput = editTextPhomeNumber.getText().toString();
-		if (strInput.length() > 0) {
-			putLog("当前拨出的电话号码为：" + strInput);
-			isCalled = true;
-			setPhoneStateListener(); // 启动监听
-			dial(strInput); // 调用电话拨出服务，并关闭系统
-		} else {
-			// 无输入电话号码
-			displayTip("当前无输入电话号码!");
-		}
-
-		putFuncationName("doCallPhoneWork");
-	}*/
-
-/*	// 执行电话拨出、系统结束事务
-	public void dial(String telNum) {
-		doExitWork(); // 防止其它子Activity在整个过程中影响，关闭
-		Intent it = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + telNum));
-		startActivity(it);
-		finish();
-		putFuncationName("dial");
-	}*/
 
 	// 短信接收倾听
 	private BroadcastReceiver mReceiverBroadcastReceiver = new BroadcastReceiver() {

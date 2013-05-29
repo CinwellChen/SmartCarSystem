@@ -299,7 +299,7 @@ public class SmartCarPhone extends Activity {
 		// doExitWork(); // 防止其它子Activity在整个过程中影响，关闭
 		Intent it = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + telNum));
 		startActivity(it);
-		finish();
+		//finish();
 		putFuncationName("dial");
 	}
 
